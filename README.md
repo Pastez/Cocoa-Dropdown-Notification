@@ -102,4 +102,4 @@ PSDropdownNotificationCenter.apperiance.messageColor = [UIColor whiteColor];
 
 * UIColor *bottomHLineColor
 	
-	color of bootom horizontal line, if nil line will not appear
+	color of bottom horizontal line, if nil line will not appear
