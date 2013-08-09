@@ -30,6 +30,33 @@ PSDropdownNotificationData *data = [[PSDropdownNotificationData alloc] initWithT
 [[NSNotificationCenter defaultCenter] postNotificationName:PSNotificationCenterEventShowNotification object:data];
 ```
 
+### Data properties
+
+* int uniqueIndetifier
+	
+	notification unique indetifier, if notification is visible notification with the same id will be not displayed property is ignored if set to default value INT_MAX
+
+* NSString *title
+
+	notification title
+
+* NSString *message
+
+	notification message
+
+* UIImage *image
+
+	notification image if nil, image will be ignored
+
+* CFTimeInterval displayDuration
+
+	duration of notification life on screen
+
+* PSDropdownNotificationApperiance *apperiance
+
+	copy of default apperiance that can be overrided for notification
+
+
 ## Apperiance
 
 You can change apperiance of invidual notification by accesing apperiance property in PSDropdownNotificationData
