@@ -71,6 +71,7 @@
 {
     PSDropdownNotificationData *data = [[PSDropdownNotificationData alloc] initWithTitle:@"Test"
                                                                          message:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet commodo sapien, vitae fringilla quam. Quisque consectetur dolor vitae auctor adipiscing."];
+    data.uniqueIndetifier = 100;
     if (drand48() > 0.5) {
         data.image = [UIImage imageNamed:@"NotificationIcon"];
     }

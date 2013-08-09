@@ -27,6 +27,7 @@
 {
     self = [super init];
     if (self) {
+        self.uniqueIndetifier   = INT_MAX;
         self.title              = title;
         self.message            = message;
         self.image              = image;
@@ -154,6 +155,14 @@ NSString * const PSNotificationCenterEventShowNotification = @"psEventShowNotifi
 {
     if (_visibleNotifications.count >= _maxVisibleNotifications) {
         [self hideNotification:_visibleNotifications[0]];
+    }
+    //check for the same unique indentifiers
+    if (notificationData.uniqueIndetifier != INT_MAX) {
+        for (PSDropdownNotificationView *visbleNotification in _visibleNotifications) {
+            if (visbleNotification.data.uniqueIndetifier == notificationData.uniqueIndetifier) {
+                return;
+            }
+        }
     }
     
     CGRect notificationFrame = CGRectMake(0, 0, 320, DEFAULT_VIEW_HEIGHT);

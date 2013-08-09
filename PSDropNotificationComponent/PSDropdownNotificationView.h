@@ -11,7 +11,7 @@
 
 @interface PSDropdownNotificationView : UIView
 
-@property (assign,readonly,nonatomic) PSDropdownNotificationData *data;
+@property (strong,readonly,nonatomic) PSDropdownNotificationData *data;
 @property (strong,nonatomic) NSTimer *timer;
 
 - (id)initWithFrame:(CGRect)frame andNotificationData:(PSDropdownNotificationData *)data;

@@ -32,6 +32,9 @@
 
 @interface PSDropdownNotificationData : NSObject
 
+@property (readwrite,nonatomic) int uniqueIndetifier;                       // notification unique indetifier, if notification is
+                                                                            // visible notification with the same id will be not displayed
+                                                                            // property is ignored if set to default value INT_MAX
 @property (strong,nonatomic) NSString *title;                               // notification title
 @property (strong,nonatomic) NSString *message;                             // notification message
 @property (strong,nonatomic) UIImage *image;                                // notification image if nil, image will be ignored
